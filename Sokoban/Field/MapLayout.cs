@@ -1,23 +1,31 @@
+using Microsoft.Xna.Framework;
+using Sokoban.Field.Tiles;
 using Sokoban.Utils;
 using System.Collections.Generic;
+using System.IO;
 
 namespace Sokoban.Field
 {
     public class MapLayout : IValidatable
     {
-        public string Terrain { get; }
-        public List<Point> ActorPositions { get; }
+        public List<Tile> Terrain { get; }
+        public List<Vector2> ActorPositions { get; }
 
-        public MapLayout(string terrain, List<Point> actorPositions)
+        public MapLayout(string lvl)
         {
-            Terrain = terrain;
-            ActorPositions = actorPositions;
+            string terrainStr = GetTerrainText(lvl);
             Validate();
         }
 
         public void Validate()
         {
-            throw new System.NotImplementedException();
+           
+        }
+
+        public static string GetTerrainText(string levelDirName)
+        {
+            string root = DirManager.GetRootDir();
+            return File.ReadAllText($"{root}\\Content\\Levels\\{levelDirName}\\Terrain.txt");
         }
     }
 }

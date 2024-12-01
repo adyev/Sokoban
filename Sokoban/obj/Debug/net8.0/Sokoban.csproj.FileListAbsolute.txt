@@ -23,3 +23,6 @@ C:\Users\MDK\source\repos\Sokoban\Sokoban\obj\Debug\net8.0\refint\Sokoban.dll
 C:\Users\MDK\source\repos\Sokoban\Sokoban\obj\Debug\net8.0\Sokoban.pdb
 C:\Users\MDK\source\repos\Sokoban\Sokoban\obj\Debug\net8.0\Sokoban.genruntimeconfig.cache
 C:\Users\MDK\source\repos\Sokoban\Sokoban\obj\Debug\net8.0\ref\Sokoban.dll
+C:\Users\MDK\source\repos\Sokoban\Sokoban\obj\Debug\net8.0\Sokoban.sourcelink.json
+C:\Users\MDK\source\repos\Sokoban\Sokoban\bin\Debug\net8.0\Content\gordon.xnb
+C:\Users\MDK\source\repos\Sokoban\Sokoban\bin\Debug\net8.0\Content\DirtTile.xnb

@@ -1,6 +1,8 @@
-using Sokoban.Utils;
 
 namespace Sokoban.Field.Tiles
 {
-    public class WallTile(Point position) : Tile(position);
+    public class WallTile : Tile
+    {
+        string NameTag = "WallTile";
+    }
 }
