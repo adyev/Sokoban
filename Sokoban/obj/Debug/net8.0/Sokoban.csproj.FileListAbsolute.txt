@@ -26,3 +26,5 @@ C:\Users\MDK\source\repos\Sokoban\Sokoban\obj\Debug\net8.0\ref\Sokoban.dll
 C:\Users\MDK\source\repos\Sokoban\Sokoban\obj\Debug\net8.0\Sokoban.sourcelink.json
 C:\Users\MDK\source\repos\Sokoban\Sokoban\bin\Debug\net8.0\Content\gordon.xnb
 C:\Users\MDK\source\repos\Sokoban\Sokoban\bin\Debug\net8.0\Content\DirtTile.xnb
+C:\Users\MDK\source\repos\Sokoban\Sokoban\bin\Debug\net8.0\Content\DestinationTile.xnb
+C:\Users\MDK\source\repos\Sokoban\Sokoban\bin\Debug\net8.0\Content\Sack.xnb

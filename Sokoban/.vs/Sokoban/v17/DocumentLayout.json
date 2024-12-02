@@ -11,32 +11,64 @@
       "RelativeMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|c:\\users\\mdk\\source\\repos\\sokoban\\sokoban\\field\\tiles\\ioccupiable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|solutionrelative:field\\tiles\\ioccupiable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|c:\\users\\mdk\\source\\repos\\sokoban\\sokoban\\content\\levels\\lvl1\\actors.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|solutionrelative:content\\levels\\lvl1\\actors.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|c:\\users\\mdk\\source\\repos\\sokoban\\sokoban\\field\\tiles\\roadtile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|solutionrelative:field\\tiles\\roadtile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|c:\\users\\mdk\\source\\repos\\sokoban\\sokoban\\content\\levels\\lvl1\\terrain.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|solutionrelative:content\\levels\\lvl1\\terrain.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|c:\\users\\mdk\\source\\repos\\sokoban\\sokoban\\field\\tiles\\emptytile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|solutionrelative:field\\tiles\\emptytile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|c:\\users\\mdk\\source\\repos\\sokoban\\sokoban\\map\\field.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|solutionrelative:map\\field.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|c:\\users\\mdk\\source\\repos\\sokoban\\sokoban\\field\\tiles\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|solutionrelative:field\\tiles\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|c:\\users\\mdk\\source\\repos\\sokoban\\sokoban\\map\\tiles\\ioccupiable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|solutionrelative:map\\tiles\\ioccupiable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|c:\\users\\mdk\\source\\repos\\sokoban\\sokoban\\utils\\mapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|solutionrelative:utils\\mapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|c:\\users\\mdk\\source\\repos\\sokoban\\sokoban\\map\\tiles\\emptytile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|solutionrelative:map\\tiles\\emptytile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|c:\\users\\mdk\\source\\repos\\sokoban\\sokoban\\map\\tiles\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|solutionrelative:map\\tiles\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|c:\\users\\mdk\\source\\repos\\sokoban\\sokoban\\actors\\box.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|solutionrelative:actors\\box.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|c:\\users\\mdk\\source\\repos\\sokoban\\sokoban\\actors\\imovable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|solutionrelative:actors\\imovable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|c:\\users\\mdk\\source\\repos\\sokoban\\sokoban\\utils\\controls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|solutionrelative:utils\\controls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|c:\\users\\mdk\\source\\repos\\sokoban\\sokoban\\actors\\actor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|solutionrelative:actors\\actor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|c:\\users\\mdk\\source\\repos\\sokoban\\sokoban\\utils\\directions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|solutionrelative:utils\\directions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|c:\\users\\mdk\\source\\repos\\sokoban\\sokoban\\field\\field.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|solutionrelative:field\\field.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|c:\\users\\mdk\\source\\repos\\sokoban\\sokoban\\map\\tiles\\roadtile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|solutionrelative:map\\tiles\\roadtile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|c:\\users\\mdk\\source\\repos\\sokoban\\sokoban\\map\\maplayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|solutionrelative:map\\maplayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|c:\\users\\mdk\\source\\repos\\sokoban\\sokoban\\map\\tiles\\destinationpointtile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|solutionrelative:map\\tiles\\destinationpointtile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|c:\\users\\mdk\\source\\repos\\sokoban\\sokoban\\map\\tiles\\walltile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{358A56F9-8FEF-4328-9259-61504595BB65}|Sokoban.csproj|solutionrelative:map\\tiles\\walltile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,62 +78,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Mapper.cs",
+              "DocumentMoniker": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Utils\\Mapper.cs",
+              "RelativeDocumentMoniker": "Utils\\Mapper.cs",
+              "ToolTip": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Utils\\Mapper.cs",
+              "RelativeToolTip": "Utils\\Mapper.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAABcAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T06:58:34.012Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RoadTile.cs",
-              "DocumentMoniker": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Field\\Tiles\\RoadTile.cs",
-              "RelativeDocumentMoniker": "Field\\Tiles\\RoadTile.cs",
-              "ToolTip": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Field\\Tiles\\RoadTile.cs",
-              "RelativeToolTip": "Field\\Tiles\\RoadTile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "IOccupiable.cs",
+              "DocumentMoniker": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Map\\Tiles\\IOccupiable.cs",
+              "RelativeDocumentMoniker": "Map\\Tiles\\IOccupiable.cs",
+              "ToolTip": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Map\\Tiles\\IOccupiable.cs",
+              "RelativeToolTip": "Map\\Tiles\\IOccupiable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T15:31:52.274Z",
+              "WhenOpened": "2024-12-02T03:39:11.077Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "EmptyTile.cs",
-              "DocumentMoniker": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Field\\Tiles\\EmptyTile.cs",
-              "RelativeDocumentMoniker": "Field\\Tiles\\EmptyTile.cs",
-              "ToolTip": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Field\\Tiles\\EmptyTile.cs",
-              "RelativeToolTip": "Field\\Tiles\\EmptyTile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Field.cs",
+              "DocumentMoniker": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Map\\Field.cs",
+              "RelativeDocumentMoniker": "Map\\Field.cs",
+              "ToolTip": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Map\\Field.cs",
+              "RelativeToolTip": "Map\\Field.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAtwE0AAABtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T15:31:48.147Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IOccupiable.cs",
-              "DocumentMoniker": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Field\\Tiles\\IOccupiable.cs",
-              "RelativeDocumentMoniker": "Field\\Tiles\\IOccupiable.cs",
-              "ToolTip": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Field\\Tiles\\IOccupiable.cs",
-              "RelativeToolTip": "Field\\Tiles\\IOccupiable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T15:30:21.446Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Controls.cs",
-              "DocumentMoniker": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Utils\\Controls.cs",
-              "RelativeDocumentMoniker": "Utils\\Controls.cs",
-              "ToolTip": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Utils\\Controls.cs",
-              "RelativeToolTip": "Utils\\Controls.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T15:22:58.109Z",
+              "WhenOpened": "2024-12-02T06:47:25.57Z",
               "EditorCaption": ""
             },
             {
@@ -112,22 +127,61 @@
               "RelativeDocumentMoniker": "Actors\\Player.cs",
               "ToolTip": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Actors\\Player.cs",
               "RelativeToolTip": "Actors\\Player.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAUwDIAAABIAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwAsAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T15:13:08.413Z",
+              "WhenOpened": "2024-12-02T07:39:27.725Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Actor.cs",
-              "DocumentMoniker": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Actors\\Actor.cs",
-              "RelativeDocumentMoniker": "Actors\\Actor.cs",
-              "ToolTip": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Actors\\Actor.cs",
-              "RelativeToolTip": "Actors\\Actor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA6AAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "IMovable.cs",
+              "DocumentMoniker": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Actors\\IMovable.cs",
+              "RelativeDocumentMoniker": "Actors\\IMovable.cs",
+              "ToolTip": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Actors\\IMovable.cs",
+              "RelativeToolTip": "Actors\\IMovable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T15:11:50.881Z",
+              "WhenOpened": "2024-12-01T15:45:32.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Directions.cs",
+              "DocumentMoniker": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Utils\\Directions.cs",
+              "RelativeDocumentMoniker": "Utils\\Directions.cs",
+              "ToolTip": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Utils\\Directions.cs",
+              "RelativeToolTip": "Utils\\Directions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T07:36:22.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Controls.cs",
+              "DocumentMoniker": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Utils\\Controls.cs",
+              "RelativeDocumentMoniker": "Utils\\Controls.cs",
+              "ToolTip": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Utils\\Controls.cs",
+              "RelativeToolTip": "Utils\\Controls.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T07:50:51.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Actors.txt",
+              "DocumentMoniker": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Content\\Levels\\lvl1\\Actors.txt",
+              "RelativeDocumentMoniker": "Content\\Levels\\lvl1\\Actors.txt",
+              "ToolTip": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Content\\Levels\\lvl1\\Actors.txt",
+              "RelativeToolTip": "Content\\Levels\\lvl1\\Actors.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-12-02T08:37:59.078Z",
               "EditorCaption": ""
             },
             {
@@ -138,35 +192,113 @@
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAAwEwAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAApwFYAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T15:09:45.728Z",
+              "WhenOpened": "2024-12-01T16:00:35.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EmptyTile.cs",
+              "DocumentMoniker": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Map\\Tiles\\EmptyTile.cs",
+              "RelativeDocumentMoniker": "Map\\Tiles\\EmptyTile.cs",
+              "ToolTip": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Map\\Tiles\\EmptyTile.cs",
+              "RelativeToolTip": "Map\\Tiles\\EmptyTile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T03:42:26.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Terrain.txt",
+              "DocumentMoniker": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Content\\Levels\\lvl1\\Terrain.txt",
+              "RelativeDocumentMoniker": "Content\\Levels\\lvl1\\Terrain.txt",
+              "ToolTip": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Content\\Levels\\lvl1\\Terrain.txt",
+              "RelativeToolTip": "Content\\Levels\\lvl1\\Terrain.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-12-02T02:28:21.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Box.cs",
+              "DocumentMoniker": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Actors\\Box.cs",
+              "RelativeDocumentMoniker": "Actors\\Box.cs",
+              "ToolTip": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Actors\\Box.cs",
+              "RelativeToolTip": "Actors\\Box.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T07:01:54.87Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "Field.cs",
-              "DocumentMoniker": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Field\\Field.cs",
-              "RelativeDocumentMoniker": "Field\\Field.cs",
-              "ToolTip": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Field\\Field.cs",
-              "RelativeToolTip": "Field\\Field.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAIAzwDEAAAATAAAAAAAAAA==",
+              "Title": "Tile.cs",
+              "DocumentMoniker": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Map\\Tiles\\Tile.cs",
+              "RelativeDocumentMoniker": "Map\\Tiles\\Tile.cs",
+              "ToolTip": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Map\\Tiles\\Tile.cs",
+              "RelativeToolTip": "Map\\Tiles\\Tile.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAUwB4AAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T14:12:45.521Z",
+              "WhenOpened": "2024-12-02T03:41:15.118Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Tile.cs",
-              "DocumentMoniker": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Field\\Tiles\\Tile.cs",
-              "RelativeDocumentMoniker": "Field\\Tiles\\Tile.cs",
-              "ToolTip": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Field\\Tiles\\Tile.cs",
-              "RelativeToolTip": "Field\\Tiles\\Tile.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwB0AAAAMAAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "RoadTile.cs",
+              "DocumentMoniker": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Map\\Tiles\\RoadTile.cs",
+              "RelativeDocumentMoniker": "Map\\Tiles\\RoadTile.cs",
+              "ToolTip": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Map\\Tiles\\RoadTile.cs",
+              "RelativeToolTip": "Map\\Tiles\\RoadTile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T09:02:59.867Z",
+              "WhenOpened": "2024-12-02T03:39:23.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DestinationPointTile.cs",
+              "DocumentMoniker": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Map\\Tiles\\DestinationPointTile.cs",
+              "RelativeDocumentMoniker": "Map\\Tiles\\DestinationPointTile.cs",
+              "ToolTip": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Map\\Tiles\\DestinationPointTile.cs",
+              "RelativeToolTip": "Map\\Tiles\\DestinationPointTile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T03:37:37.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MapLayout.cs",
+              "DocumentMoniker": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Map\\MapLayout.cs",
+              "RelativeDocumentMoniker": "Map\\MapLayout.cs",
+              "ToolTip": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Map\\MapLayout.cs",
+              "RelativeToolTip": "Map\\MapLayout.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T07:09:51.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "WallTile.cs",
+              "DocumentMoniker": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Map\\Tiles\\WallTile.cs",
+              "RelativeDocumentMoniker": "Map\\Tiles\\WallTile.cs",
+              "ToolTip": "C:\\Users\\MDK\\source\\repos\\Sokoban\\Sokoban\\Map\\Tiles\\WallTile.cs",
+              "RelativeToolTip": "Map\\Tiles\\WallTile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T07:16:48.475Z",
               "EditorCaption": ""
             }
           ]

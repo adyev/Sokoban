@@ -1,8 +1,9 @@
-using Sokoban.Field.Tiles;
+using Sokoban.Actors;
+using Sokoban.Map.Tiles;
 
 namespace Sokoban.Utils
 {
-    public class TerrainMapper
+    public class Mapper
     {
         public static Tile SymbolToTile(char symbol)
         {
@@ -12,6 +13,16 @@ namespace Sokoban.Utils
                 'R' => new RoadTile(),
                 'D' => new DestinationPointTile(),
                 _ => new EmptyTile(),
+            };
+        }
+
+        public static Actor SymbolToActor(char symbol)
+        {
+            return symbol switch
+            {
+                'P' => new Player(),
+                'B' => new Box(),
+                _ => null,
             };
         }
     }

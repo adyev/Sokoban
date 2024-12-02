@@ -10,15 +10,15 @@ namespace Sokoban.Utils
 {
     internal static class Controls
     {
-        public static Vector2 GetMoveDirection(Keys key)
+        public static Directions GetMoveDirection(Keys key)
         {
             return key switch
             {
-                Keys.Up => new Vector2(0, -1f),
-                Keys.Down => new Vector2(0, 1f),
-                Keys.Right => new Vector2(1f, 0),
-                Keys.Left => new Vector2(-1f, 0),
-                _ => new Vector2(0, 0),
+                Keys.Up => Directions.UP,
+                Keys.Down => Directions.DOWN,
+                Keys.Right => Directions.RIGHT,
+                Keys.Left => Directions.LEFT,
+                _ => Directions.NONE,
             };
         }
         public static Keys GetPressedKey(KeyboardState state)

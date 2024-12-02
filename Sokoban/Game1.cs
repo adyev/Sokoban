@@ -2,8 +2,8 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Sokoban.Actors;
-using Sokoban.Field.Tiles;
-using Sokoban.Field;
+using Sokoban.Map.Tiles;
+using Sokoban.Map;
 using Sokoban.Utils;
 using System.Collections.Generic;
 using System;
@@ -16,8 +16,7 @@ namespace Sokoban
         private SpriteBatch _spriteBatch;
         private Tile Tile {  get; set; }
         private Keys PressedKey {  get; set; }
-        private Player Player {  get; set; }
-        private Field.Field Field { get; set; }
+        private Field Field { get; set; }
         static Vector2 center;
         static float step;
         static Dictionary<string, Texture2D> Textures { get; set; }
@@ -25,6 +24,8 @@ namespace Sokoban
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
+            _graphics.PreferredBackBufferHeight = 900;
+            _graphics.PreferredBackBufferWidth = 1600;
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
             center = new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2);
@@ -34,10 +35,7 @@ namespace Sokoban
 
         protected override void Initialize()
         {
-            Field = new Field.Field("lvl1", _graphics.PreferredBackBufferHeight, _graphics.PreferredBackBufferWidth);
-            Player = new Player();
-            Player.CorrentTile = Field.Tiles[1, 1];
-            Field.Tiles[1, 1].Occupand = Player;
+            Field = new Field("lvl1", _graphics.PreferredBackBufferHeight, _graphics.PreferredBackBufferWidth);
             PressedKey = Keys.None;
             
             base.Initialize();
@@ -52,18 +50,20 @@ namespace Sokoban
             {
                 ["Player"] = Content.Load<Texture2D>("gordon"),
                 ["RoadTile"] = Content.Load<Texture2D>("DirtTile"),
+                ["Box"] = Content.Load<Texture2D>("Sack"),
             };
-            Player.Texture = Textures["Player"];
             foreach (var tile in Field.Tiles)
             {
-                if (tile is RoadTile)
+                if (Textures.TryGetValue(tile.NameTag, out var tileTexture))
                 {
-                    tile.Texture = Textures["RoadTile"];
+                    tile.Texture = tileTexture;
                     tile.Scale = Field.TileSize / tile.Texture.Width;
                 }
+                if (tile.Occupand != null && Textures.TryGetValue(tile.Occupand.NameTag, out var actorTexture))
+                {
+                    tile.Occupand.Texture = actorTexture;
+                }
             }
-            
-            // TODO: use this.Content to load your game content here
         }
 
         protected override void Update(GameTime gameTime)
@@ -74,19 +74,17 @@ namespace Sokoban
             if (PressedKey == Keys.None)
             {
                 PressedKey = Controls.GetPressedKey(keyState);
-                Player.Move(PressedKey); 
+                Field.Player.Move(PressedKey); 
             }
             else if (keyState.IsKeyUp(PressedKey))
                 PressedKey = Keys.None;   
-
-            // TODO: Add your update logic here
 
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.DarkGray);
+            GraphicsDevice.Clear(Color.Black);
             _spriteBatch.Begin();
             //Tile.Position = center;
             //foreach (var tile in Field.Tiles)

@@ -1,4 +1,4 @@
-using Sokoban.Field.Tiles;
+using Sokoban.Map.Tiles;
 using Sokoban.Actors;
 
 namespace Sokoban.Actions

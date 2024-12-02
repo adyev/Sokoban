@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Sokoban.Field.Tiles;
+using Sokoban.Map.Tiles;
+using Sokoban.Utils;
 
 namespace Sokoban.Actors
 {
@@ -8,6 +9,7 @@ namespace Sokoban.Actors
     {
         public Texture2D Texture { get; set; }
         public Tile CorrentTile { get; set; }
+        public abstract string NameTag { get; }
 
         public virtual void Draw(SpriteBatch spriteBatch, float scale)
         {
@@ -18,5 +20,7 @@ namespace Sokoban.Actors
         {
             return tileHeigth / Texture.Height;
         }
+
+        public abstract bool CanMoveTo(Directions direction);
     }
 }

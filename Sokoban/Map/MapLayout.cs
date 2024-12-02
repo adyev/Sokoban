@@ -1,10 +1,10 @@
 using Microsoft.Xna.Framework;
-using Sokoban.Field.Tiles;
+using Sokoban.Map.Tiles;
 using Sokoban.Utils;
 using System.Collections.Generic;
 using System.IO;
 
-namespace Sokoban.Field
+namespace Sokoban.Map
 {
     public class MapLayout : IValidatable
     {

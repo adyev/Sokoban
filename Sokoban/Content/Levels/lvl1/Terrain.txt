@@ -1,3 +1,9 @@
 ﻿.RRR
 RRRR
 RR..
+.RR.
+.RR.
+.RR.
+..RR
+..RR
+..RR

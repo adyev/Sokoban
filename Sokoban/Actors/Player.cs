@@ -2,12 +2,14 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Sokoban.Actions;
-using Sokoban.Field.Tiles;
+using Sokoban.Map.Tiles;
+using Sokoban.Utils;
 
 namespace Sokoban.Actors
 {
     public class Player : Actor
     {
+        public override string NameTag { get => "Player"; }
         public void Initialize(Texture2D texture, Tile tile)
         {
             Texture = texture;
@@ -18,6 +20,8 @@ namespace Sokoban.Actors
         {
             throw new System.NotImplementedException();
         }
+
+        public override bool CanMoveTo(Directions directions) => true;
 
         public void Move(Keys key)
         {
