@@ -50,7 +50,8 @@ namespace Sokoban
             {
                 ["Player"] = Content.Load<Texture2D>("gordon"),
                 ["RoadTile"] = Content.Load<Texture2D>("DirtTile"),
-                ["Box"] = Content.Load<Texture2D>("Sack"),
+                ["Box"] = Content.Load<Texture2D>("Box"),
+                ["DestinationPointTile"] = Content.Load<Texture2D>("DestinationTile"),
             };
             foreach (var tile in Field.Tiles)
             {
@@ -71,6 +72,7 @@ namespace Sokoban
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
             var keyState = Keyboard.GetState();
+
             if (PressedKey == Keys.None)
             {
                 PressedKey = Controls.GetPressedKey(keyState);
@@ -79,6 +81,8 @@ namespace Sokoban
             else if (keyState.IsKeyUp(PressedKey))
                 PressedKey = Keys.None;   
 
+            if (Field.IsLvlFinished())
+                Exit();
             base.Update(gameTime);
         }
 

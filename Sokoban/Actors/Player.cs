@@ -21,48 +21,30 @@ namespace Sokoban.Actors
             throw new System.NotImplementedException();
         }
 
-        public override bool CanMoveTo(Directions directions) => true;
+        public void MoveTo(Tile tile)
+        {
+            CorrentTile.Occupand = null;
+            tile.Occupand = this;
+            CorrentTile = tile;
+        }
 
         public void Move(Keys key)
         {
-            switch (key)
+            var direction = Controls.GetMoveDirection(key);
+            var tileToMove = CorrentTile.GetTileByDirection(direction);
+            if (tileToMove != null && tileToMove is IOccupiable)
             {
-                case Keys.Left:
-                    if (CorrentTile.Left != null && CorrentTile.Left is IOccupiable)
+                if (tileToMove.Occupand != null) 
+                {
+                    if (tileToMove.Occupand.CanMoveTo(direction))
                     {
-                        CorrentTile.Occupand = null;
-                        CorrentTile = CorrentTile.Left;
-                        CorrentTile.Occupand = this;
+                        ((IMovable)tileToMove.Occupand).MoveTo(tileToMove.GetTileByDirection(direction));
+                        MoveTo(tileToMove);
                     }
-                    break;
-                case Keys.Right:
-                    if (CorrentTile.Right != null && CorrentTile.Right is IOccupiable)
-                    {
-                        CorrentTile.Occupand = null;
-                        CorrentTile = CorrentTile.Right;
-                        CorrentTile.Occupand = this;
-                    }
-                    break;
-                case Keys.Up:
-                    if (CorrentTile.Top != null && CorrentTile.Top is IOccupiable)
-                    {
-                        CorrentTile.Occupand = null;
-                        CorrentTile = CorrentTile.Top;
-                        CorrentTile.Occupand = this;
-                    }
-                    break;
-                case Keys.Down:
-                    if (CorrentTile.Bottom != null && CorrentTile.Bottom is IOccupiable)
-                    {
-                        CorrentTile.Occupand = null;
-                        CorrentTile = CorrentTile.Bottom;
-                        CorrentTile.Occupand = this;
-                    }
-                    break;
-                default:
-                    break;
+                }
+                else
+                    MoveTo(tileToMove);
             }
-                
         }
     }
 }

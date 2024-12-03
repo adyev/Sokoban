@@ -45,5 +45,17 @@ namespace Sokoban.Map.Tiles
             if (y < tiles.GetLength(0) - 1)
                 Bottom = tiles[y + 1, x];
         }
+
+        public Tile GetTileByDirection(Directions direction)
+        {
+            return direction switch
+            {
+                Directions.UP => Top,
+                Directions.RIGHT => Right,
+                Directions.DOWN => Bottom,
+                Directions.LEFT => Left,
+                _ => null
+            };
+        }
     }
 }

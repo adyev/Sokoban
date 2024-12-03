@@ -3,7 +3,7 @@ RRRR
 RR..
 .RR.
 .RR.
-.RR.
+RRR.
+RRRD
 ..RR
-..RR
-..RR
+..DR

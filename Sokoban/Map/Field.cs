@@ -16,15 +16,19 @@ namespace Sokoban.Map
         public Tile[,] Tiles { get; }
         public Player Player { get; private set; }
 
+        public List<Tile> DestinationPoints { get; private set; }
+
         public Field(string level, float windowHeight, float windowWidth)
         {
             var terrain = LoadTerrain(level);
             var actors = LoadActors(level);
+            DestinationPoints = [];
             TileSize = CalculateTileSize(terrain, Math.Min(windowWidth, windowHeight));
             Tiles = FormTerrainTilesFromLayout(terrain);
             SetTilePositions(windowHeight, windowWidth);
             SetTileRelations();
             SetActors(actors);
+            DestinationPoints = GetDestinationPoints();
         }
 
         public void SetActors(string layout)
@@ -57,8 +61,17 @@ namespace Sokoban.Map
             for (var i = 0; i < height; i++)
                 for (var j = 0; j < width; j++)
                     result[i, j] = Mapper.SymbolToTile(lines[i][j]);
-            
+
             return result;
+        }
+
+        private List<Tile> GetDestinationPoints()
+        {
+            var points = new List<Tile>();
+            foreach (var tile in Tiles)
+                if (tile is DestinationPointTile)
+                    points.Add(tile);
+            return points;
         }
 
         private static float CalculateTileSize(string terrain, float minSide)
@@ -89,6 +102,16 @@ namespace Sokoban.Map
                     Tiles[i, j].SetRelations(Tiles, i, j);
                 }
             }
+        }
+
+        public bool IsLvlFinished()
+        {
+            foreach (var tile in DestinationPoints)
+            {
+                if (tile.Occupand is not Box)
+                    return false;
+            }
+            return true;
         }
 
         public void Draw(SpriteBatch spriteBatch)

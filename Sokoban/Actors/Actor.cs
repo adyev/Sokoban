@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Sokoban.Map.Tiles;
 using Sokoban.Utils;
+using System;
 
 namespace Sokoban.Actors
 {
@@ -18,9 +19,13 @@ namespace Sokoban.Actors
 
         public virtual float GetScale(float tileHeigth)
         {
-            return tileHeigth / Texture.Height;
+            return tileHeigth / Math.Max(Texture.Height, Texture.Width);
         }
 
-        public abstract bool CanMoveTo(Directions direction);
+        public virtual bool CanMoveTo(Directions direction)
+        {
+            var tileInDirection = CorrentTile.GetTileByDirection(direction);
+            return tileInDirection != null && tileInDirection is IOccupiable && tileInDirection.Occupand == null;
+        }
     }
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/MDK/source/repos/Sokoban/Sokoban/Content/Sack.png</SourceFile>
-  <SourceTime>2024-12-02T18:14:24.3916655+07:00</SourceTime>
-  <DestFile>C:/Users/MDK/source/repos/Sokoban/Sokoban/Content/bin/DesktopGL/Content/Sack.xnb</DestFile>
-  <DestTime>2024-12-02T18:15:37.8834437+07:00</DestTime>
+  <SourceFile>C:/Users/MDK/source/repos/Sokoban/Sokoban/Content/Box.png</SourceFile>
+  <SourceTime>2024-12-02T18:38:56.9885192+07:00</SourceTime>
+  <DestFile>C:/Users/MDK/source/repos/Sokoban/Sokoban/Content/bin/DesktopGL/Box.xnb</DestFile>
+  <DestTime>2024-12-02T18:39:06.7866705+07:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2024-08-17T00:05:56+07:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
