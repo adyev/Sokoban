@@ -48,8 +48,15 @@ namespace Sokoban.Map
                 }
         }
 
-        private string LoadTerrain(string level) => File.ReadAllText($"{DirManager.GetRootDir()}\\Content\\Levels\\{level}\\Terrain.txt");
-        private string LoadActors(string level) => File.ReadAllText($"{DirManager.GetRootDir()}\\Content\\Levels\\{level}\\Actors.txt");
+        private static string LoadTerrain(string level)
+        {
+            return File.ReadAllText($"{DirManager.GetRootDir()}\\Content\\Levels\\{level}\\Terrain.txt");
+        }
+
+        private static string LoadActors(string level)
+        {
+            return File.ReadAllText($"{DirManager.GetRootDir()}\\Content\\Levels\\{level}\\Actors.txt");
+        }
 
         private static Tile[,] FormTerrainTilesFromLayout(string layout)
         {

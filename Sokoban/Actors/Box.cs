@@ -5,22 +5,45 @@ using Sokoban.Utils;
 
 namespace Sokoban.Actors
 {
-    public class Box : Actor, IMovable
+    public class Box : Actor, IInteractable, IMovable
     {
         public override string NameTag
         {
             get => "Box";
         }
-        public int GetMovePriority()
+
+        public void Interact(Actor actor)
         {
-            throw new NotImplementedException();
+            if (actor is Player)
+                TryMoveTo(
+                    CorrentTile.GetTileByDirection(
+                        GetInteractionDirection(actor)));
+        }
+        public bool TryMoveTo(Tile tile)
+        {
+            if (tile == null || tile is not IOccupiable)
+                return false;
+            var tileAsOccupiable = tile as IOccupiable;
+            if (tile.Occupand == null)
+                tileAsOccupiable.Occupy(this);
+            else if (tile.Occupand is IInteractable interactable)
+                    interactable.Interact(this);
+            
+            return tile == CorrentTile;
         }
 
-        public void MoveTo(Tile tile)
+        private Directions GetInteractionDirection(Actor actor)
         {
-            CorrentTile.Occupand = null;
-            tile.Occupand = this;
-            CorrentTile = tile;
+            var actorTile = actor.CorrentTile;
+            if (actorTile.Left == CorrentTile)
+                return Directions.LEFT;
+            if (actorTile.Right == CorrentTile)
+                return Directions.RIGHT;
+            if (actorTile.Top == CorrentTile)
+                return Directions.UP;
+            if (actorTile.Bottom == CorrentTile)
+                return Directions.DOWN;
+            return Directions.NONE;
         }
     }
 }

@@ -15,9 +15,14 @@ namespace Sokoban.Map.Tiles
             }
         }
 
-        public void SetOccupand(Actor occupand)
+        public void Occupy(Actor occupand)
         {
-            Occupand = occupand;
+            if (Occupand == null)
+            {
+                occupand.CorrentTile.Occupand = null;
+                Occupand = occupand;
+                occupand.CorrentTile = this;
+            }
         }
     }
 }

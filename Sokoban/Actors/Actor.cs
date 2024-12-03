@@ -21,11 +21,5 @@ namespace Sokoban.Actors
         {
             return tileHeigth / Math.Max(Texture.Height, Texture.Width);
         }
-
-        public virtual bool CanMoveTo(Directions direction)
-        {
-            var tileInDirection = CorrentTile.GetTileByDirection(direction);
-            return tileInDirection != null && tileInDirection is IOccupiable && tileInDirection.Occupand == null;
-        }
     }
 }

@@ -9,6 +9,6 @@ namespace Sokoban.Map.Tiles
 {
     internal interface IOccupiable
     {
-        void SetOccupand(Actor occupand);
+        void Occupy(Actor occupand);
     }
 }

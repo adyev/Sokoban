@@ -12,13 +12,11 @@ namespace Sokoban
 {
     public class Game1 : Game
     {
-        private GraphicsDeviceManager _graphics;
+        private readonly GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-        private Tile Tile {  get; set; }
         private Keys PressedKey {  get; set; }
         private Field Field { get; set; }
         static Vector2 center;
-        static float step;
         static Dictionary<string, Texture2D> Textures { get; set; }
 
         public Game1()
@@ -29,7 +27,6 @@ namespace Sokoban
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
             center = new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2);
-            step = _graphics.PreferredBackBufferHeight / 8;
             
         }
 
@@ -44,8 +41,6 @@ namespace Sokoban
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            var tileSafeArea = GraphicsDevice.Viewport.TitleSafeArea;
-            var playerPosition = center;
             Textures = new Dictionary<string, Texture2D>
             {
                 ["Player"] = Content.Load<Texture2D>("gordon"),
@@ -76,7 +71,11 @@ namespace Sokoban
             if (PressedKey == Keys.None)
             {
                 PressedKey = Controls.GetPressedKey(keyState);
-                Field.Player.Move(PressedKey); 
+                Field.Player.TryMoveTo(Field
+                                      .Player
+                                      .CorrentTile
+                                      .GetTileByDirection(Controls
+                                                         .GetMoveDirection(PressedKey))); 
             }
             else if (keyState.IsKeyUp(PressedKey))
                 PressedKey = Keys.None;   
@@ -90,9 +89,6 @@ namespace Sokoban
         {
             GraphicsDevice.Clear(Color.Black);
             _spriteBatch.Begin();
-            //Tile.Position = center;
-            //foreach (var tile in Field.Tiles)
-            //    tile.Draw(_spriteBatch, Tile.GetScale(_graphics.PreferredBackBufferHeight, 8));
             Field.Draw(_spriteBatch);
             
             _spriteBatch.End();

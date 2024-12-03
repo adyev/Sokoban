@@ -7,7 +7,7 @@ using Sokoban.Utils;
 
 namespace Sokoban.Actors
 {
-    public class Player : Actor
+    public class Player : Actor, IMovable
     {
         public override string NameTag { get => "Player"; }
         public void Initialize(Texture2D texture, Tile tile)
@@ -16,35 +16,21 @@ namespace Sokoban.Actors
             CorrentTile = tile; 
         }
 
-        public int GetMovePriority()
+        public bool TryMoveTo(Tile tile)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public void MoveTo(Tile tile)
-        {
-            CorrentTile.Occupand = null;
-            tile.Occupand = this;
-            CorrentTile = tile;
-        }
-
-        public void Move(Keys key)
-        {
-            var direction = Controls.GetMoveDirection(key);
-            var tileToMove = CorrentTile.GetTileByDirection(direction);
-            if (tileToMove != null && tileToMove is IOccupiable)
+            if (tile == null || tile is not IOccupiable)
+                return false;
+            var tileAsOccupiable = tile as IOccupiable;
+            if (tile.Occupand == null)
+                tileAsOccupiable.Occupy(this);
+            else if (tile.Occupand is IInteractable interactable)
             {
-                if (tileToMove.Occupand != null) 
-                {
-                    if (tileToMove.Occupand.CanMoveTo(direction))
-                    {
-                        ((IMovable)tileToMove.Occupand).MoveTo(tileToMove.GetTileByDirection(direction));
-                        MoveTo(tileToMove);
-                    }
-                }
-                else
-                    MoveTo(tileToMove);
+                interactable.Interact(this);
+                if (tile.Occupand == null)
+                    tileAsOccupiable.Occupy(this);
             }
+
+            return tile == CorrentTile;
         }
     }
 }
