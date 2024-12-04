@@ -17,7 +17,7 @@ namespace Sokoban
         private SpriteBatch _spriteBatch;
         private Keys PressedKey {  get; set; }
         private Field Field { get; set; }
-        static int CorrentLevel { get; set; } = 1;
+        static int CorrentLevel { get; set; } = 4;
         static int LevelCount { get; set; } = DirManager.GetLevelCount();
         static SpriteFont Font { get; set; }
         static Vector2 Center { get; set; }
@@ -91,7 +91,7 @@ namespace Sokoban
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.Black);
-            _spriteBatch.Begin();
+            _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
             Field.Draw(_spriteBatch);
             if (Field.IsLvlFinished())
             {

@@ -1,4 +1,6 @@
 using System;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Sokoban.Map.Tiles;
 using Sokoban.Utils;
 
@@ -43,6 +45,13 @@ namespace Sokoban.Actors
             if (actorTile.Bottom == CorrentTile)
                 return Directions.DOWN;
             return Directions.NONE;
+        }
+        public override void Draw(SpriteBatch spriteBatch, float scale)
+        {
+            var color = Color.White;
+            if (CorrentTile is DestinationPointTile)
+                color *= 0.5f;
+            spriteBatch.Draw(Texture, CorrentTile.Position, null, color, 0f, new Vector2(Texture.Width / 2, Texture.Height / 2), scale, SpriteEffects.None, 0f);
         }
     }
 }
