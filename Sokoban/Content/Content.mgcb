@@ -49,6 +49,13 @@
 /processorParam:TextureFormat=Color
 /build:DirtTile.png
 
+#begin EndText.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:EndText.spritefont
+
 #begin gordon.png
 /importer:TextureImporter
 /processor:TextureProcessor

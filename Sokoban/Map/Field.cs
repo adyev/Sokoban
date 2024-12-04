@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection.Emit;
 using Sokoban.Actors;
+using Microsoft.Xna.Framework.Content;
 
 namespace Sokoban.Map
 {
@@ -18,8 +19,10 @@ namespace Sokoban.Map
 
         public List<Tile> DestinationPoints { get; private set; }
 
-        public Field(string level, float windowHeight, float windowWidth)
+        public Field(string level, GraphicsDeviceManager graphics)
         {
+            var windowHeight = graphics.PreferredBackBufferHeight;
+            var windowWidth = graphics.PreferredBackBufferWidth;
             var terrain = LoadTerrain(level);
             var actors = LoadActors(level);
             DestinationPoints = [];
@@ -29,6 +32,21 @@ namespace Sokoban.Map
             SetTileRelations();
             SetActors(actors);
             DestinationPoints = GetDestinationPoints();
+        }
+
+        public void Initialize()
+        {
+            foreach (var tile in Tiles)
+            {
+                if (TextureManager.Textures.TryGetValue(tile.NameTag, out var tileTexture))
+                {
+                    tile.Initialize(tileTexture, TileSize / tileTexture.Width);
+                }
+                if (tile.Occupand != null && TextureManager.Textures.TryGetValue(tile.Occupand.NameTag, out var actorTexture))
+                {
+                    tile.Occupand.Initialize(actorTexture);
+                }
+            }
         }
 
         public void SetActors(string layout)

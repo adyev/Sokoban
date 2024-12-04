@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>C:/Users/MDK/source/repos/Sokoban/Sokoban/Content/EndText.spritefont</SourceFile>
+  <SourceTime>2024-12-04T01:18:24.4246159+07:00</SourceTime>
+  <DestFile>C:/Users/MDK/source/repos/Sokoban/Sokoban/Content/bin/DesktopGL/Content/EndText.xnb</DestFile>
+  <DestTime>2024-12-04T01:28:36.3557472+07:00</DestTime>
+  <Importer>FontDescriptionImporter</Importer>
+  <ImporterTime>2024-08-17T00:05:56+07:00</ImporterTime>
+  <Processor>FontDescriptionProcessor</Processor>
+  <ProcessorTime>2024-08-17T00:05:56+07:00</ProcessorTime>
+  <Parameters>
+    <Key>PremultiplyAlpha</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>TextureFormat</Key>
+    <Value>Compressed</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

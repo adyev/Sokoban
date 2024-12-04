@@ -12,6 +12,11 @@ namespace Sokoban.Actors
         public Tile CorrentTile { get; set; }
         public abstract string NameTag { get; }
 
+        public void Initialize(Texture2D texture)
+        {
+            Texture = texture;
+        }
+
         public virtual void Draw(SpriteBatch spriteBatch, float scale)
         {
             spriteBatch.Draw(Texture, CorrentTile.Position, null, Color.White, 0f, new Vector2(Texture.Width / 2, Texture.Height / 2), scale, SpriteEffects.None, 0f);

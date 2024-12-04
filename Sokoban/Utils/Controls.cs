@@ -31,6 +31,10 @@ namespace Sokoban.Utils
                 return Keys.Right;
             if (state.IsKeyDown(Keys.Left))
                 return Keys.Left;
+            if (state.IsKeyDown(Keys.N))
+                return Keys.N;
+            if (state.IsKeyDown(Keys.R))
+                return Keys.R;
             return Keys.None;
         }
     }

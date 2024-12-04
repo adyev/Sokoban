@@ -17,10 +17,9 @@ namespace Sokoban.Map.Tiles
         public Tile Top { get; set; }
         public Tile Bottom { get; set; }
 
-        public void Initialize(Texture2D texture, Vector2 position, float scale)
+        public void Initialize(Texture2D texture, float scale)
         {
             Texture = texture;
-            Position = position;
             Scale = scale;
         }
 

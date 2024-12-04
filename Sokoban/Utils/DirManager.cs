@@ -18,5 +18,10 @@ namespace Sokoban.Utils
             }
             return dirInfo.FullName;
         }
+
+        public static int GetLevelCount()
+        {
+            return new DirectoryInfo($"{GetRootDir()}\\Content\\Levels").GetDirectories().Length;
+        }
     }
 }

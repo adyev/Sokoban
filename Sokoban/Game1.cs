@@ -7,6 +7,7 @@ using Sokoban.Map;
 using Sokoban.Utils;
 using System.Collections.Generic;
 using System;
+using Sokoban.States;
 
 namespace Sokoban
 {
@@ -16,23 +17,28 @@ namespace Sokoban
         private SpriteBatch _spriteBatch;
         private Keys PressedKey {  get; set; }
         private Field Field { get; set; }
-        static Vector2 center;
-        static Dictionary<string, Texture2D> Textures { get; set; }
+        static int CorrentLevel { get; set; } = 1;
+        static int LevelCount { get; set; } = DirManager.GetLevelCount();
+        static SpriteFont Font { get; set; }
+        static Vector2 Center { get; set; }
+        State GameState { get; set; }
+        State CorrentState { get; set; }
 
         public Game1()
         {
-            _graphics = new GraphicsDeviceManager(this);
-            _graphics.PreferredBackBufferHeight = 900;
-            _graphics.PreferredBackBufferWidth = 1600;
+            _graphics = new GraphicsDeviceManager(this)
+            {
+                PreferredBackBufferHeight = 900,
+                PreferredBackBufferWidth = 1600
+            };
+            Center = new Vector2 { X = _graphics.PreferredBackBufferWidth / 2, Y = _graphics.PreferredBackBufferHeight / 2 };
             Content.RootDirectory = "Content";
-            IsMouseVisible = true;
-            center = new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2);
-            
+            IsMouseVisible = true;            
         }
 
         protected override void Initialize()
         {
-            Field = new Field("lvl1", _graphics.PreferredBackBufferHeight, _graphics.PreferredBackBufferWidth);
+            Field = new Field($"lvl{CorrentLevel}", _graphics);
             PressedKey = Keys.None;
             
             base.Initialize();
@@ -41,25 +47,9 @@ namespace Sokoban
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            Textures = new Dictionary<string, Texture2D>
-            {
-                ["Player"] = Content.Load<Texture2D>("gordon"),
-                ["RoadTile"] = Content.Load<Texture2D>("DirtTile"),
-                ["Box"] = Content.Load<Texture2D>("Box"),
-                ["DestinationPointTile"] = Content.Load<Texture2D>("DestinationTile"),
-            };
-            foreach (var tile in Field.Tiles)
-            {
-                if (Textures.TryGetValue(tile.NameTag, out var tileTexture))
-                {
-                    tile.Texture = tileTexture;
-                    tile.Scale = Field.TileSize / tile.Texture.Width;
-                }
-                if (tile.Occupand != null && Textures.TryGetValue(tile.Occupand.NameTag, out var actorTexture))
-                {
-                    tile.Occupand.Texture = actorTexture;
-                }
-            }
+            TextureManager.LoadTextures(Content);
+            Font = Content.Load<SpriteFont>("EndText");
+            Field.Initialize();
         }
 
         protected override void Update(GameTime gameTime)
@@ -67,6 +57,21 @@ namespace Sokoban
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
             var keyState = Keyboard.GetState();
+            if (Field.IsLvlFinished())
+            {
+                if (CorrentLevel != LevelCount && PressedKey == Keys.N)
+                {
+                    CorrentLevel++;
+                    Field = new Field($"lvl{CorrentLevel}", _graphics);
+                    Field.Initialize();
+                }
+            }
+
+            if (PressedKey == Keys.R)
+            {
+                Field = new Field($"lvl{CorrentLevel}", _graphics);
+                Field.Initialize();
+            }
 
             if (PressedKey == Keys.None)
             {
@@ -78,10 +83,8 @@ namespace Sokoban
                                                          .GetMoveDirection(PressedKey))); 
             }
             else if (keyState.IsKeyUp(PressedKey))
-                PressedKey = Keys.None;   
+                PressedKey = Keys.None;
 
-            if (Field.IsLvlFinished())
-                Exit();
             base.Update(gameTime);
         }
 
@@ -90,7 +93,11 @@ namespace Sokoban
             GraphicsDevice.Clear(Color.Black);
             _spriteBatch.Begin();
             Field.Draw(_spriteBatch);
-            
+            if (Field.IsLvlFinished())
+            {
+                var text = CorrentLevel == LevelCount ? "End! Press Esc!" : "Nice! Press N for next level!";
+                _spriteBatch.DrawString(Font, text, Center, Color.White, 0, Font.MeasureString(text) / 2, 1, SpriteEffects.None, 1);
+            }
             _spriteBatch.End();
 
             base.Draw(gameTime);
