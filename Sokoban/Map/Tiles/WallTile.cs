@@ -7,7 +7,7 @@ namespace Sokoban.Map.Tiles
         {
             get
             {
-                return "RoadTile";
+                return "WallTile";
             }
         }
     }

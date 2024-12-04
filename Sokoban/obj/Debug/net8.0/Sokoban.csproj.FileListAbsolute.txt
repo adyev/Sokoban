@@ -30,3 +30,4 @@ C:\Users\MDK\source\repos\Sokoban\Sokoban\bin\Debug\net8.0\Content\DestinationTi
 C:\Users\MDK\source\repos\Sokoban\Sokoban\bin\Debug\net8.0\Content\Sack.xnb
 C:\Users\MDK\source\repos\Sokoban\Sokoban\bin\Debug\net8.0\Content\Box.xnb
 C:\Users\MDK\source\repos\Sokoban\Sokoban\bin\Debug\net8.0\Content\EndText.xnb
+C:\Users\MDK\source\repos\Sokoban\Sokoban\bin\Debug\net8.0\Content\Rock.xnb

@@ -21,6 +21,7 @@ namespace Sokoban.Utils
                 ["RoadTile"] = content.Load<Texture2D>("DirtTile"),
                 ["Box"] = content.Load<Texture2D>("Box"),
                 ["DestinationPointTile"] = content.Load<Texture2D>("DestinationTile"),
+                ["WallTile"] = content.Load<Texture2D>("Rock"),
             };
         }
     }

@@ -17,7 +17,7 @@ namespace Sokoban
         private SpriteBatch _spriteBatch;
         private Keys PressedKey {  get; set; }
         private Field Field { get; set; }
-        static int CorrentLevel { get; set; } = 4;
+        static int CorrentLevel { get; set; } = 2;
         static int LevelCount { get; set; } = DirManager.GetLevelCount();
         static SpriteFont Font { get; set; }
         static Vector2 Center { get; set; }

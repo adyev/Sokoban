@@ -9,9 +9,11 @@
     <File>C:/Users/MDK/source/repos/Sokoban/Sokoban/Content/DirtTile.png</File>
     <File>C:/Users/MDK/source/repos/Sokoban/Sokoban/Content/EndText.spritefont</File>
     <File>C:/Users/MDK/source/repos/Sokoban/Sokoban/Content/gordon.png</File>
+    <File>C:/Users/MDK/source/repos/Sokoban/Sokoban/Content/Rock.png</File>
     <File>C:/Users/MDK/source/repos/Sokoban/Sokoban/Content/Sack.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

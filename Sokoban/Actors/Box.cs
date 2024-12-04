@@ -50,7 +50,7 @@ namespace Sokoban.Actors
         {
             var color = Color.White;
             if (CorrentTile is DestinationPointTile)
-                color *= 0.5f;
+                color = Color.IndianRed;
             spriteBatch.Draw(Texture, CorrentTile.Position, null, color, 0f, new Vector2(Texture.Width / 2, Texture.Height / 2), scale, SpriteEffects.None, 0f);
         }
     }
