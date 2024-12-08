@@ -29,7 +29,11 @@ namespace Sokoban.Menus
         {
             var center = new Vector2(Outline.Center.X, Outline.Center.Y);
             var color = IsActive ? Color.White : Color.Gray;
+            var origin = Font.MeasureString(Text) / 2;
+            origin.X += 5;
+            origin.Y -= 2;
             spriteBatch.Draw(BackgroundTexture, Outline, color);
+            spriteBatch.DrawString(Font, Text, center, Color.Black, 0, origin, Scale, SpriteEffects.None, 1);
             spriteBatch.DrawString(Font, Text, center, color, 0, Font.MeasureString(Text) / 2, Scale, SpriteEffects.None, 1);
         }
     }
