@@ -5,9 +5,7 @@ using System;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using System.IO;
-using System.Reflection.Emit;
 using Sokoban.Actors;
-using Microsoft.Xna.Framework.Content;
 
 namespace Sokoban.Map
 {
@@ -16,7 +14,6 @@ namespace Sokoban.Map
         public float TileSize { get; private set; }
         public Tile[,] Tiles { get; }
         public Player Player { get; private set; }
-
         public List<Tile> DestinationPoints { get; private set; }
 
         public Field(string level, GraphicsDeviceManager graphics)

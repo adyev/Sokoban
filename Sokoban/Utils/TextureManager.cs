@@ -1,19 +1,15 @@
 ﻿using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sokoban.Utils
 {
     internal static class TextureManager
     {
         public static Dictionary<string, Texture2D> Textures;
+        public static Dictionary<string, SpriteFont> Fonts;
 
-        public static void LoadTextures(ContentManager content)
+        public static void LoadResources(ContentManager content)
         {
             Textures = new Dictionary<string, Texture2D>
             {
@@ -22,6 +18,13 @@ namespace Sokoban.Utils
                 ["Box"] = content.Load<Texture2D>("Box"),
                 ["DestinationPointTile"] = content.Load<Texture2D>("DestinationTile"),
                 ["WallTile"] = content.Load<Texture2D>("Rock"),
+                ["Button"] = content.Load<Texture2D>("Button"),
+                ["MenuBG"] = content.Load<Texture2D>("MenuBackground"),
+            };
+
+            Fonts = new Dictionary<string, SpriteFont>
+            {
+                ["Base"] = content.Load<SpriteFont>("EndText"),
             };
         }
     }

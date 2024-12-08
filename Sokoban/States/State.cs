@@ -1,23 +1,19 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using Sokoban.Menus;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sokoban.States
 {
-    internal abstract class State(Game game, ContentManager content, Texture2D backgroundTexture)
+    internal abstract class State
     {
-        public Texture2D BackgroundTexture { get; private set; } = backgroundTexture;
-        public ContentManager Content { get; private set; } = content;
-        public Game Game { get; private set; } = game;
+        public Texture2D BackgroundTexture { get; set; }
+        public ContentManager Content { get; set; }
+        public Game1 Game { get; protected set; }
+        public GraphicsDeviceManager Graphics {  get; protected set; }
 
-        public abstract void LoadContent();
+
+        //public abstract void LoadContent(ContentManager content, Texture2D texture);
         public abstract void Update(GameTime gameTime);
-        public abstract void Draw(GameTime gameTime);
+        public abstract void Draw(GameTime gameTime, SpriteBatch spriteBatch);
     }
 }

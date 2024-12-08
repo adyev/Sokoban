@@ -1,7 +1,6 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Sokoban.Map.Tiles;
-using Sokoban.Utils;
 using System;
 
 namespace Sokoban.Actors

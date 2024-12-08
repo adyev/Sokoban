@@ -1,6 +1,4 @@
 
-using Sokoban.Actors;
-
 namespace Sokoban.Map.Tiles
 {
     public class EmptyTile : Tile

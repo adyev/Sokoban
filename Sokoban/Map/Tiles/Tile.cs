@@ -23,12 +23,6 @@ namespace Sokoban.Map.Tiles
             Scale = scale;
         }
 
-        public void Draw(SpriteBatch spriteBatch)
-        {
-            if (Texture != null) 
-                spriteBatch.Draw(Texture, Position, null, Color.White, 0f, new Vector2(Texture.Width / 2, Texture.Height / 2), Scale, SpriteEffects.None, 0f);
-            Occupand?.Draw(spriteBatch, Occupand.GetScale(Texture.Height * Scale));
-        }
 
         public void SetRelations(Tile[,] tiles, int y, int x)
         {
@@ -55,6 +49,12 @@ namespace Sokoban.Map.Tiles
                 Directions.LEFT => Left,
                 _ => null
             };
+        }
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            if (Texture != null) 
+                spriteBatch.Draw(Texture, Position, null, Color.White, 0f, new Vector2(Texture.Width / 2, Texture.Height / 2), Scale, SpriteEffects.None, 0f);
+            Occupand?.Draw(spriteBatch, Occupand.GetScale(Texture.Height * Scale));
         }
     }
 }
