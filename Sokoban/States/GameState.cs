@@ -6,12 +6,11 @@ using Sokoban.Utils;
 
 namespace Sokoban.States
 {
-    internal class GameState : State
+    public class GameState : State
     {
         Field Field {  get; set; }
         int CorrentLevel { get; set; }
         static int LevelCount { get; set; } = DirManager.GetLevelCount();
-        private Keys PressedKey { get; set; }
         static SpriteFont Font { get; set; }
         static Vector2 Center { get; set; }
 
@@ -22,42 +21,48 @@ namespace Sokoban.States
             Center = new Vector2 { X = graphics.PreferredBackBufferWidth / 2, Y = graphics.PreferredBackBufferHeight / 2 };
             Field = new Field($"lvl{Game.CorrentLevel}", graphics);
             Field.Initialize();
-            Font = TextureManager.Fonts["Base"];
+            Font = ContentProvider.Fonts["Base"];
             CorrentLevel = Game.CorrentLevel;
         }
 
         public override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Game.Exit();
             var keyState = Keyboard.GetState();
-            if (Field.IsLvlFinished())
+            if (Game.PressedKey == Keys.None)
             {
-                if (CorrentLevel != LevelCount && PressedKey == Keys.N)
+                Game.PressedKey = Controls.GetPressedKey(keyState);
+                if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 {
-                    CorrentLevel++;
+                    Game.GameState = this;
+                    Game.SetMainMenuWithContinue(this, new System.EventArgs());
+                }
+
+                if (Field.IsLvlFinished())
+                {
+                    if (CorrentLevel != LevelCount && Game.PressedKey == Keys.N)
+                    {
+                        CorrentLevel++;
+                        Field = new Field($"lvl{CorrentLevel}", Graphics);
+                        Field.Initialize();
+                    }
+                }
+
+                if (Game.PressedKey == Keys.R)
+                {
                     Field = new Field($"lvl{CorrentLevel}", Graphics);
                     Field.Initialize();
                 }
-            }
 
-            if (PressedKey == Keys.R)
-            {
-                Field = new Field($"lvl{CorrentLevel}", Graphics);
-                Field.Initialize();
-            }
-
-            if (PressedKey == Keys.None)
-            {
-                PressedKey = Controls.GetPressedKey(keyState);
                 Field.Player.TryMoveTo(Field
                                       .Player
                                       .CorrentTile
                                       .GetTileByDirection(Controls
-                                                         .GetMoveDirection(PressedKey)));
+                                                         .GetMoveDirection(Game.PressedKey)));
             }
-            else if (keyState.IsKeyUp(PressedKey))
-                PressedKey = Keys.None;
+            else if (keyState.IsKeyUp(Game.PressedKey))
+            {
+                Game.PressedKey = Keys.None;
+            }
         }
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {

@@ -19,8 +19,8 @@ namespace Sokoban.Menus
         {
             Text = text;
             Outline = outline;
-            BackgroundTexture = TextureManager.Textures["Button"];
-            Font = TextureManager.Fonts["Base"];
+            BackgroundTexture = ContentProvider.Textures["Button"];
+            Font = ContentProvider.Fonts["Base"];
             if (Outline.Width * 0.8f < Font.MeasureString(Text).X)
                 Scale = Outline.Width * 0.8f / Font.MeasureString(Text).X;
         }

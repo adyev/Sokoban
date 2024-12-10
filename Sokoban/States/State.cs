@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Sokoban.States
 {
-    internal abstract class State
+    public abstract class State
     {
         public Texture2D BackgroundTexture { get; set; }
         public ContentManager Content { get; set; }

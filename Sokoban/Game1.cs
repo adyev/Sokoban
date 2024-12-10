@@ -5,6 +5,7 @@ using Sokoban.Map;
 using Sokoban.Utils;
 using System;
 using Sokoban.States;
+using Sokoban.Menus;
 
 namespace Sokoban
 {
@@ -13,9 +14,10 @@ namespace Sokoban
         private readonly GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         public int CorrentLevel { get; set; } = 1;
-        GameState GameState { get; set; }
+        public GameState GameState { get; set; }
         MenuState MenuState { get; set; }
         State CorrentState { get; set; }
+        public Keys PressedKey { get; set; }
 
         public Game1()
         {
@@ -36,7 +38,7 @@ namespace Sokoban
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            TextureManager.LoadResources(Content);
+            ContentProvider.LoadResources(Content);
             GameState = new GameState(this, _graphics);
             MenuState = new MenuState(this);
             CorrentState = MenuState;
@@ -60,15 +62,24 @@ namespace Sokoban
             base.Draw(gameTime);
         }
 
-        public void SetGameState(object sender, EventArgs e)
+        public void StartNewGame(object sender, EventArgs e)
+        {
+            CorrentLevel = 1;
+            CorrentState = new GameState(this, _graphics);
+        }
+
+        public void SetMainMenuWithContinue(object sender, EventArgs e)
+        {
+            MenuState = new MenuState(this);
+            CorrentState = MenuState;
+            MenuState.Layout = new MainMenuWithContinueLayout(this);
+            MenuState.Layout.Buttons[0].IsActive = true;
+        }
+        public void ContinueGame(object sender, EventArgs e)
         {
             CorrentState = GameState;
         }
 
-        public void SetMenuState(object sender, EventArgs e)
-        {
-            CorrentState = MenuState;
-        }
         public void ExitEvent(object sender, EventArgs e)
         {
             Exit();

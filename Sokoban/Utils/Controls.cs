@@ -17,19 +17,7 @@ namespace Sokoban.Utils
         }
         public static Keys GetPressedKey(KeyboardState state)
         {
-            if (state.IsKeyDown(Keys.Up))
-                return Keys.Up;
-            if (state.IsKeyDown(Keys.Down))
-                return Keys.Down;
-            if (state.IsKeyDown(Keys.Right))
-                return Keys.Right;
-            if (state.IsKeyDown(Keys.Left))
-                return Keys.Left;
-            if (state.IsKeyDown(Keys.N))
-                return Keys.N;
-            if (state.IsKeyDown(Keys.R))
-                return Keys.R;
-            return Keys.None;
+            return state.GetPressedKeys().Length == 0 ? Keys.None : state.GetPressedKeys()[0];
         }
     }
 }

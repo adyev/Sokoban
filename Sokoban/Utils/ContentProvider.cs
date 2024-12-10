@@ -1,13 +1,15 @@
-﻿using Microsoft.Xna.Framework.Content;
+﻿using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 
 namespace Sokoban.Utils
 {
-    internal static class TextureManager
+    internal static class ContentProvider
     {
         public static Dictionary<string, Texture2D> Textures;
         public static Dictionary<string, SpriteFont> Fonts;
+        public static Dictionary<string, SoundEffect> Sounds;
 
         public static void LoadResources(ContentManager content)
         {
@@ -25,6 +27,12 @@ namespace Sokoban.Utils
             Fonts = new Dictionary<string, SpriteFont>
             {
                 ["Base"] = content.Load<SpriteFont>("EndText"),
+            };
+
+            Sounds = new Dictionary<string, SoundEffect>
+            {
+                ["MenuSelect"] = content.Load<SoundEffect>("MenuSelectSound"),
+                ["MenuSelected"] = content.Load<SoundEffect>("SelectedSound"),
             };
         }
     }

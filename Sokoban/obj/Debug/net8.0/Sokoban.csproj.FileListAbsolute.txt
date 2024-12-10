@@ -33,3 +33,5 @@ C:\Users\MDK\source\repos\Sokoban\Sokoban\bin\Debug\net8.0\Content\EndText.xnb
 C:\Users\MDK\source\repos\Sokoban\Sokoban\bin\Debug\net8.0\Content\Rock.xnb
 C:\Users\MDK\source\repos\Sokoban\Sokoban\bin\Debug\net8.0\Content\Button.xnb
 C:\Users\MDK\source\repos\Sokoban\Sokoban\bin\Debug\net8.0\Content\MenuBackground.xnb
+C:\Users\MDK\source\repos\Sokoban\Sokoban\bin\Debug\net8.0\Content\MenuSelectSound.xnb
+C:\Users\MDK\source\repos\Sokoban\Sokoban\bin\Debug\net8.0\Content\SelectedSound.xnb

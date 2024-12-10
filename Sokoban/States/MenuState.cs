@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Sokoban.Menus;
@@ -9,45 +10,53 @@ namespace Sokoban.States
 {
     internal class MenuState : State
     {
-        MenuLayout Layout {  get; set; }
-        private Keys PressedKey { get; set; } = Keys.None;
+        public MenuLayout Layout {  get; set; }
         int CorrentButtonIndex { get; set; } = 0;
+        SoundEffect MoveSoundEffect { get; set; }
+        SoundEffect SelectSoundEffect { get; set; }
 
         public MenuState(Game1 game) 
         {
             Game = game;
-            Layout = new MainManuLayout(Game);
+            Layout = new MainMenuLayout(Game);
             Layout.Buttons[CorrentButtonIndex].IsActive = true;
+            MoveSoundEffect = ContentProvider.Sounds["MenuSelect"];
+            SelectSoundEffect = ContentProvider.Sounds["MenuSelected"];
         }
 
 
         public override void Update(GameTime gameTime)
         {
-            if(Keyboard.GetState().IsKeyDown(Keys.Enter) && Layout.Buttons[CorrentButtonIndex].Click != null)
-                Layout.Buttons[CorrentButtonIndex].Click.Invoke(this, new EventArgs());
-            if (Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Game.Exit();
             var keyState = Keyboard.GetState();
-            
-
-            if (PressedKey == Keys.None)
+            if (Game.PressedKey == Keys.None)
             {
-                PressedKey = Controls.GetPressedKey(keyState);
-                if (PressedKey == Keys.Up && CorrentButtonIndex > 0)
+                Game.PressedKey = Controls.GetPressedKey(keyState);
+                if (Game.PressedKey == Keys.Enter && Layout.Buttons[CorrentButtonIndex].Click != null)
+                {
+                    SelectSoundEffect.Play();
+                    Layout.Buttons[CorrentButtonIndex].Click.Invoke(this, new EventArgs());
+                }
+
+                if (Game.PressedKey == Keys.Escape && Layout is MainMenuWithContinueLayout)
+                    Game.ContinueGame(this, new EventArgs());
+
+                if (Game.PressedKey == Keys.Up && CorrentButtonIndex > 0)
                 {
                     Layout.Buttons[CorrentButtonIndex].IsActive = false;
                     CorrentButtonIndex--;
                     Layout.Buttons[CorrentButtonIndex].IsActive = true;
+                    MoveSoundEffect.Play();
                 }
-                if (PressedKey == Keys.Down && CorrentButtonIndex < Layout.Buttons.Count - 1)
+                if (Game.PressedKey == Keys.Down && CorrentButtonIndex < Layout.Buttons.Count - 1)
                 {
                     Layout.Buttons[CorrentButtonIndex].IsActive = false;
                     CorrentButtonIndex++;
                     Layout.Buttons[CorrentButtonIndex].IsActive = true;
+                    MoveSoundEffect.Play();
                 }
             }
-            else if (keyState.IsKeyUp(PressedKey))
-                PressedKey = Keys.None;
+            else if (keyState.IsKeyUp(Game.PressedKey))
+                Game.PressedKey = Keys.None;
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)

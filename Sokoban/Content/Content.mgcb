@@ -92,6 +92,12 @@
 /processorParam:TextureFormat=Color
 /build:MenuBackground.png
 
+#begin MenuSelectSound.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:MenuSelectSound.wav
+
 #begin Rock.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -115,4 +121,10 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Sack.png
+
+#begin SelectedSound.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SelectedSound.wav
 

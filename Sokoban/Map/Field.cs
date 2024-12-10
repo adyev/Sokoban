@@ -35,11 +35,11 @@ namespace Sokoban.Map
         {
             foreach (var tile in Tiles)
             {
-                if (TextureManager.Textures.TryGetValue(tile.NameTag, out var tileTexture))
+                if (ContentProvider.Textures.TryGetValue(tile.NameTag, out var tileTexture))
                 {
                     tile.Initialize(tileTexture, TileSize / tileTexture.Width);
                 }
-                if (tile.Occupand != null && TextureManager.Textures.TryGetValue(tile.Occupand.NameTag, out var actorTexture))
+                if (tile.Occupand != null && ContentProvider.Textures.TryGetValue(tile.Occupand.NameTag, out var actorTexture))
                 {
                     tile.Occupand.Initialize(actorTexture);
                 }
